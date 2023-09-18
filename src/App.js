@@ -16,10 +16,10 @@ function App() {
 					<tbody>
 						<tr>
 							<td>
-								<a href='/labs/a1/index.html'>Lab 1</a>
+								<a href='/labs/a1'>Lab 1</a>
 							</td>
 							<td>
-								<a href='/kanbas/home.html'>A1</a>
+								<a href='/kanbas'>A1</a>
 							</td>
 						</tr>
 					</tbody>
