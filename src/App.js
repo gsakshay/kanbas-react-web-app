@@ -22,6 +22,14 @@ function App() {
 								<a href='/kanbas'>A1</a>
 							</td>
 						</tr>
+						<tr>
+							<td>
+								<a href='/labs/a2'>Lab 2</a>
+							</td>
+							<td>
+								<a href='/kanbas'>A2</a>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
