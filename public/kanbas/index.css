@@ -1,0 +1,73 @@
+body {
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+    margin: 0
+}
+
+/* Navbar Styles Start  */
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-content{
+    width: 85px;
+    height: 100vh;
+    background: black;
+}
+
+.navbar-item-container{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+.navbar-item-container a {
+    color: #ffffff;
+}
+
+.navbar-item-active {
+    background: white;
+}
+
+.navbar-item-active a{
+    color: #D41B2C;
+}
+
+.navbar-item-active .white {
+    color: grey;
+}
+
+/* This maintains the aspect ratio of the image */
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-item-icon{
+    font-size: 1.75rem;
+    color: #D41B2C;
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: D41B2C;
+}
+
+.nav-item-text {
+    margin: 0.4rem 0;
+    font-size: 0.875;
+}
+
+.grey{
+    color: grey;
+}
+
+/* Navbar Styles End  */

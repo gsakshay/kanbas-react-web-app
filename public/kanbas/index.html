@@ -6,26 +6,94 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Kanbas</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			rel="stylesheet"
+		/>
+		<link href="index.css" rel="stylesheet" />
 	</head>
 	<body>
-		<table border="0" width="100%">
-			<tbody>
-				<tr>
-					<td valign="top">
-						<ul style="margin: 0">
-							<li><a href="account">Account</a></li>
-							<li><a href="#">Dashboard</a></li>
-							<li><a href="courses">Courses</a></li>
-							<li><a href="#">Calendar</a></li>
-							<li><a href="#">Inbox</a></li>
-							<li><a href="#">History</a></li>
-							<li><a href="#">Studio</a></li>
-							<li><a href="#">Commons</a></li>
-							<li><a href="#">Help</a></li>
-						</ul>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="navbar-content">
+			<div class="logo-container navbar-item-container">
+				<a class="navbar-link" href="index.html">
+					<image
+						src="https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png"
+						alt="Logo"
+					/>
+				</a>
+			</div>
+			<!-- Add class navbar-item-active to the item that is active  -->
+			<div class="nav-account navbar-item-container">
+				<a href="index.html">
+					<i class="fa-regular fa-circle-user nav-item-icon white"></i>
+					<p class="nav-item-text">Account</p>
+				</a>
+			</div>
+			<div class="nav-dashboard navbar-item-container">
+				<a href="index.html">
+					<i class="fa-solid fa-gauge nav-item-icon"></i>
+					<p class="nav-item-text">Dashboard</p>
+				</a>
+			</div>
+			<div class="nav-courses navbar-item-container">
+				<a href="index.html">
+					<i class="fa-solid fa-book nav-item-icon"></i>
+
+					<p class="nav-item-text">Courses</p>
+				</a>
+			</div>
+			<div class="nav-calendar navbar-item-container">
+				<a href="index.html">
+					<i class="fa-solid fa-calendar-days nav-item-icon"></i>
+
+					<p class="nav-item-text">Calendar</p>
+				</a>
+			</div>
+			<div class="nav-inbox navbar-item-container">
+				<a href="index.html">
+					<i class="fa-solid fa-inbox nav-item-icon"></i>
+
+					<p class="nav-item-text">Inbox</p>
+				</a>
+			</div>
+			<div class="nav-history navbar-item-container">
+				<a href="index.html">
+					<i class="fa-regular fa-clock nav-item-icon"></i>
+
+					<p class="nav-item-text">History</p>
+				</a>
+			</div>
+			<div class="nav-studio navbar-item-container">
+				<a href="index.html">
+					<i class="fa-solid fa-tv nav-item-icon"></i>
+
+					<p class="nav-item-text">Studio</p>
+				</a>
+			</div>
+			<div class="nav-commons navbar-item-container">
+				<a href="index.html">
+					<i class="fa-solid fa-arrow-right-from-bracket nav-item-icon"></i>
+
+					<p class="nav-item-text">Commons</p>
+				</a>
+			</div>
+			<div class="nav-help navbar-item-container">
+				<a href="index.html">
+					<i class="fa-regular fa-circle-question nav-item-icon"></i>
+
+					<p class="nav-item-text">Help</p>
+				</a>
+			</div>
+		</div>
 	</body>
 </html>
