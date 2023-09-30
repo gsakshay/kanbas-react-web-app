@@ -5,84 +5,221 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Profile</title>
+		<title>Kanbas</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link href="index.css" rel="stylesheet" />
 	</head>
 	<body>
-		<table border="0" width="60%">
-			<tbody>
-				<tr>
-					<td valign="top">
-						<ul style="margin: 0">
-							<li><a href="#">Account</a></li>
-							<li><a href="#">Dashboard</a></li>
-							<li><a href="../../courses/">Courses</a></li>
-							<li><a href="#">Calendar</a></li>
-							<li><a href="#">Inbox</a></li>
-							<li><a href="#">History</a></li>
-							<li><a href="#">Studio</a></li>
-							<li><a href="#">Commons</a></li>
-							<li><a href="#">Help</a></li>
-						</ul>
-					</td>
-					<td valign="top">
-						<ul style="margin: 0">
-							<li><a href="#">Notifications</a></li>
-							<li><a href="index.html">Profile</a></li>
-							<li><a href="#">Files</a></li>
-							<li><a href="#">Settings</a></li>
-							<li><a href="#">ePortfolios</a></li>
-							<li><a href="#">Shared Content</a></li>
-							<li><a href="#">The Hub</a></li>
-							<li><a href="#">Qwicky Course Tools</a></li>
-							<li><a href="#">Global Announcements</a></li>
-						</ul>
-					</td>
-					<td valign="top">
-						<p>Jose Annunziato's Profile</p>
-						<hr />
-						<br />
-						<table border="0" width="100%">
-							<tbody>
-								<tr>
-									<td valign="top">
-										<h2 style="margin-top: 0">Jose Annunziato</h2>
+		<div class="main-container">
+			<div class="navbar-content">
+				<div class="logo-container navbar-item-container">
+					<a class="navbar-link" href="../index.html">
+						<image
+							src="https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png"
+							alt="Logo"
+						/>
+					</a>
+				</div>
+				<!-- Add class navbar-item-active to the item that is active  -->
+				<div class="nav-account navbar-item-container navbar-item-active">
+					<a href="index.html">
+						<i class="fa-regular fa-circle-user nav-item-icon white"></i>
+						<p class="nav-item-text">Account</p>
+					</a>
+				</div>
+				<div class="nav-dashboard navbar-item-container">
+					<a href="index.html">
+						<i class="fa-solid fa-gauge nav-item-icon"></i>
+						<p class="nav-item-text">Dashboard</p>
+					</a>
+				</div>
+				<div class="nav-courses navbar-item-container">
+					<a href="../">
+						<i class="fa-solid fa-book nav-item-icon"></i>
+						<p class="nav-item-text">Courses</p>
+					</a>
+				</div>
+				<div class="nav-calendar navbar-item-container">
+					<a href="index.html">
+						<i class="fa-solid fa-calendar-days nav-item-icon"></i>
 
-										<!-- Contact  -->
-										<h3>Contact</h3>
-										<p>
+						<p class="nav-item-text">Calendar</p>
+					</a>
+				</div>
+				<div class="nav-inbox navbar-item-container">
+					<a href="index.html">
+						<i class="fa-solid fa-inbox nav-item-icon"></i>
+
+						<p class="nav-item-text">Inbox</p>
+					</a>
+				</div>
+				<div class="nav-history navbar-item-container">
+					<a href="index.html">
+						<i class="fa-regular fa-clock nav-item-icon"></i>
+
+						<p class="nav-item-text">History</p>
+					</a>
+				</div>
+				<div class="nav-studio navbar-item-container">
+					<a href="index.html">
+						<i class="fa-solid fa-tv nav-item-icon"></i>
+
+						<p class="nav-item-text">Studio</p>
+					</a>
+				</div>
+				<div class="nav-commons navbar-item-container">
+					<a href="index.html">
+						<i class="fa-solid fa-arrow-right-from-bracket nav-item-icon"></i>
+
+						<p class="nav-item-text">Commons</p>
+					</a>
+				</div>
+				<div class="nav-help navbar-item-container">
+					<a href="index.html">
+						<i class="fa-regular fa-circle-question nav-item-icon"></i>
+
+						<p class="nav-item-text">Help</p>
+					</a>
+				</div>
+			</div>
+			<div class="scrollable">
+				<div class="main-page">
+					<div class="container-fluid">
+						<div class="row account-header">
+							<div class="col col-sm-1">
+								<i class="fa-solid fa-bars custom-hamburger"></i>
+							</div>
+							<div class="col col-sm-11 profile-name-text">
+								Jose Annunziato's Profile
+							</div>
+						</div>
+						<div class="row">
+							<hr class="custom-divider" />
+						</div>
+						<div class="row">
+							<div class="col col-sm-3">
+								<div class="account-navigation">
+									<!-- Add account-nav-active class for the active class  -->
+									<div class="nav-element">
+										<a href="/">
+											<p class="nav-element-title">Notifications</p>
+										</a>
+									</div>
+									<div class="nav-element account-nav-active">
+										<a href="/">
+											<p class="nav-element-title">Profile</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="/">
+											<p class="nav-element-title">Files</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="/">
+											<p class="nav-element-title">Settings</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="/">
+											<p class="nav-element-title">ePortfolios</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="/">
+											<p class="nav-element-title">Shared Content</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="/">
+											<p class="nav-element-title">The Hub</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="/">
+											<p class="nav-element-title">Quickly Course Tools</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="/">
+											<p class="nav-element-title">Global Announcements</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col col-sm-9">
+								<div class="float-end">
+									<a href="edit.html">
+										<button
+											type="button"
+											class="btn btn-secondary profile-action-button"
+										>
+											Edit Profile
+											<i class="fa-solid fa-pencil" style="color: grey"></i>
+										</button>
+									</a>
+								</div>
+
+								<div class="profile-details">
+									<div class="basic-details">
+										<div class="account-icon-container">
+											<i class="fa fa-user account-icon" aria-hidden="true"></i>
+										</div>
+										<h2 class="account-title">Jose Annunziato</h2>
+									</div>
+
+									<div class="contact">
+										<h3 class="section-heading">Contact</h3>
+										<p class="section-description">
 											No registered services, you can add some on the
-											<a style="text-decoration: none" href="">settings</a>
-											page.
+											<a href="/">
+												<span class="nav-element-title">settings</span>
+											</a>
+											page
 										</p>
+									</div>
 
-										<!-- Biography  -->
-										<h3>Biography</h3>
-										<p>
+									<div class="biography">
+										<h3 class="section-heading">Biography</h3>
+										<p class="section-description">
 											Faculty, Software Engineer, AI, Space, and renewables
 											enthusiast.
 										</p>
+									</div>
 
-										<h3>Links</h3>
-										<a style="text-decoration: none" href="#">YouTube</a>
-									</td>
-
-									<!-- Edit Profile Section  -->
-									<td valign="top">
-										<button type="button">
-											<a
-												href="edit.html"
-												style="text-decoration: none; color: black"
-											>
-												&#x270E; Edit Profile</a
-											>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+									<div class="links">
+										<h3 class="section-heading">Links</h3>
+										<p class="section-description">
+											<i class="fa-solid fa-link link-icon pointer"></i>
+											<span class="nav-element-title"> Youtube</span>
+											<i
+												class="fa-solid fa-up-right-from-square red pointer"
+											></i>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
