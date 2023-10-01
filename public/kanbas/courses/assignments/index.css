@@ -183,7 +183,7 @@ a {
     overflow-x: hidden;
 }
 
-.custom-breadcrumb{ 
+.custom-breadcrumb {
     font-size: 1.5em;
 }
 
@@ -252,4 +252,8 @@ a {
 
 .list-group-item {
     border-radius: 0 !important;
+}
+
+.rounded-5{
+    border: 1px solid black;
 }
