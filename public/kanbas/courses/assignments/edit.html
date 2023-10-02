@@ -6,248 +6,472 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Kanbas</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link href="index.css" rel="stylesheet" />
 	</head>
 	<body>
-		<table border="0" width="60%">
-			<tbody>
-				<tr>
-					<td valign="top">
-						<ul style="margin: 0">
-							<li><a href="../../account/">Account</a></li>
-							<li><a href="#">Dashboard</a></li>
-							<li><a href="../../courses/">Courses</a></li>
-							<li><a href="#">Calendar</a></li>
-							<li><a href="#">Inbox</a></li>
-							<li><a href="#">History</a></li>
-							<li><a href="#">Studio</a></li>
-							<li><a href="#">Commons</a></li>
-							<li><a href="#">Help</a></li>
-						</ul>
-					</td>
-					<td valign="top">
-						<ul style="margin: 0">
-							<li><a href="../index.html">Home</a></li>
-							<li><a href="#">Modules</a></li>
-							<li><a href="#">Piazza</a></li>
-							<li><a href="#">Zoom Meetings</a></li>
-							<li><a href="index.html">Assignments</a></li>
-							<li><a href="#">Quizzes</a></li>
-							<li><a href="../grades.html">Grades</a></li>
-							<li><a href="#">People</a></li>
-							<li><a href="#">Panopoto Video</a></li>
-							<li><a href="#">Discussions</a></li>
-							<li><a href="#">Announcements</a></li>
-							<li><a href="#">Pages</a></li>
-							<li><a href="#">Files</a></li>
-							<li><a href="#">Rubrics</a></li>
-							<li><a href="#">Outcomes</a></li>
-							<li><a href="#">Collaborations</a></li>
-							<li><a href="#">Syllabus</a></li>
-							<li><a href="../settings">Settings</a></li>
-						</ul>
-					</td>
-					<td valign="top">
-						<select id="select-one">
-							<option value="EDIT">Edit Assignment Dates</option>
-							<option selected value="SPEED_GRADER">Speed Grader</option>
-							<option value="DUPLICATE">Duplicate</option>
-							<option value="DELETE">Delete</option>
-							<option value="MOVE">Move To...</option>
-							<option value="SEND">Send To...</option>
-							<option value="COPY">Copy To...</option>
-							<option value="SHARE">Share to Commons</option>
-						</select>
+		<div class="main-container">
+			<div class="navbar-content">
+				<div class="logo-container navbar-item-container">
+					<a class="navbar-link" href="../index.html">
+						<image
+							src="https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png"
+							alt="Logo"
+						/>
+					</a>
+				</div>
+				<!-- Add class navbar-item-active to the item that is active  -->
+				<div class="nav-account navbar-item-container">
+					<a href="../index.html">
+						<i class="fa-regular fa-circle-user nav-item-icon white"></i>
+						<p class="nav-item-text">Account</p>
+					</a>
+				</div>
+				<div class="nav-dashboard navbar-item-container">
+					<a href="../../dashboard/">
+						<i class="fa-solid fa-gauge nav-item-icon"></i>
+						<p class="nav-item-text">Dashboard</p>
+					</a>
+				</div>
+				<div class="nav-courses navbar-item-container navbar-item-active">
+					<a href="../">
+						<i class="fa-solid fa-book nav-item-icon"></i>
+						<p class="nav-item-text">Courses</p>
+					</a>
+				</div>
+				<div class="nav-calendar navbar-item-container">
+					<a href="#">
+						<i class="fa-solid fa-calendar-days nav-item-icon"></i>
 
-						<hr />
+						<p class="nav-item-text">Calendar</p>
+					</a>
+				</div>
+				<div class="nav-inbox navbar-item-container">
+					<a href="#">
+						<i class="fa-solid fa-inbox nav-item-icon"></i>
 
-						<h3>Assignment Name</h3>
+						<p class="nav-item-text">Inbox</p>
+					</a>
+				</div>
+				<div class="nav-history navbar-item-container">
+					<a href="#">
+						<i class="fa-regular fa-clock nav-item-icon"></i>
 
-						<form action="index.html" method="GET" id="assignment">
-							<input
-								style="margin: 1rem 0"
-								id="text-fields-assignment"
-								placeholder="Assignment Name"
-								value="A1 - ENV + HTML"
-							/>
-							<br />
+						<p class="nav-item-text">History</p>
+					</a>
+				</div>
+				<div class="nav-studio navbar-item-container">
+					<a href="#">
+						<i class="fa-solid fa-tv nav-item-icon"></i>
 
-							<!-- Description  -->
+						<p class="nav-item-text">Studio</p>
+					</a>
+				</div>
+				<div class="nav-commons navbar-item-container">
+					<a href="#">
+						<i class="fa-solid fa-arrow-right-from-bracket nav-item-icon"></i>
 
-							<textarea style="margin: 1rem 0" cols="30" rows="10">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea
-							>
-							<br />
+						<p class="nav-item-text">Commons</p>
+					</a>
+				</div>
+				<div class="nav-help navbar-item-container">
+					<a href="#">
+						<i class="fa-regular fa-circle-question nav-item-icon"></i>
 
-							<!-- Points  -->
+						<p class="nav-item-text">Help</p>
+					</a>
+				</div>
+			</div>
+			<div class="scrollable">
+				<div class="main-page">
+					<div class="container-fluid">
+						<div class="row account-header">
+							<div class="col col-sm-1">
+								<i class="fa-solid fa-bars custom-hamburger"></i>
+							</div>
+							<div class="col col-sm-11 custom-breadcrumb">
+								<nav
+									style="--bs-breadcrumb-divider: '>'"
+									aria-label="breadcrumb"
+								>
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item red">
+											<a href="#">CS4550.12631.202410</a>
+										</li>
+										<li class="breadcrumb-item red" aria-current="page">
+											Assignments
+										</li>
+										<li class="breadcrumb-item active" aria-current="page">
+											A1 - SETUP
+										</li>
+									</ol>
+								</nav>
+							</div>
+							<!-- <div class="float-end">
+								<i class="fa-solid fa-glasses"></i>
+							</div> -->
+						</div>
 
-							<label for="text-fields-points">Points</label>
-							<br />
-							<input
-								style="margin-bottom: 1rem"
-								type="text"
-								id="text-fields-points"
-								value="100"
-							/><br />
+						<div class="row">
+							<hr class="custom-divider" />
+						</div>
+						<div class="row">
+							<div class="col d-none d-md-block col-md-2">
+								<div class="account-navigation">
+									<div class="navigation-head-text">
+										<i>202410_1 Fall 2023 Semest...</i>
+									</div>
+									<!-- Add account-nav-active class for the active class  -->
+									<div class="nav-element">
+										<a href="../index.html">
+											<p class="nav-element-title">Home</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="#">
+											<p class="nav-element-title">Modules</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="#">
+											<p class="nav-element-title">Piazza</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="#">
+											<p class="nav-element-title">Zoom Meetings</p>
+										</a>
+									</div>
+									<div class="nav-element account-nav-active">
+										<a href="index.html">
+											<p class="nav-element-title">Assignments</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="#">
+											<p class="nav-element-title">Quizzes</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="#">
+											<p class="nav-element-title">Grades</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="#">
+											<p class="nav-element-title">People</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="#">
+											<p class="nav-element-title">Panopto Video</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="#">
+											<p class="nav-element-title">
+												Announcements
+												<i class="fa-solid fa-eye-slash grey"></i>
+											</p>
+										</a>
+									</div>
+									<div class="nav-element">
+										<a href="#">
+											<p class="nav-element-title">Settings</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col col-12 col-md-10 container-fluid">
+								<div class="row container-fluid p-0 m-0">
+									<div class="row p-0">
+										<div class="col-12 p-0">
+											<button
+												type="button"
+												class="btn btn-secondary float-end cab inline"
+											>
+												<i
+													style="font-size: 1rem"
+													class="fa-solid fa-ellipsis-vertical black"
+												></i>
+											</button>
+											<p class="m-1 p-0 green float-end"></p>
+											<button
+												type="button"
+												class="btn btn-outline-success green float-end published-button"
+											>
+												<i class="fa-solid fa-circle-check green"></i>
+												Published
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<hr class="custom-divider ma-10" />
+								</div>
+								<div class="row">
+									<div class="mb-3">
+										<label for="assignment-name" class="form-label"
+											>Assignment Name</label
+										>
+										<input
+											type="text"
+											class="form-control"
+											id="exampleFormControlInput1"
+											value="A1 - ENV + HTML"
+										/>
+									</div>
+									<div class="mb-3">
+										<textarea
+											class="form-control"
+											id="assignment-desc"
+											rows="5"
+										>
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam hic debitis excepturi autem voluptate minima beatae saepe perspiciatis, animi architecto cumque aperiam ea est tenetur! Rem facere quidem tempora quod.</textarea
+										>
+									</div>
+								</div>
+								<div class="row align-items-center mb-4">
+									<div class="col-3 assignment-edit-keys align-items-center">
+										<p class="assignment-edit-key-name m-0">Points</p>
+									</div>
+									<div class="col-9 col-lg-6 assignment-edit-values">
+										<input
+											type="text"
+											class="form-control"
+											id="assignment-edit-value"
+											value="100"
+										/>
+									</div>
+								</div>
+								<div class="row align-items-center mb-4">
+									<div class="col-3 assignment-edit-keys align-items-center">
+										<p class="assignment-edit-key-name m-0">Assignment Group</p>
+									</div>
+									<div class="col-9 col-lg-6 assignment-edit-values">
+										<select class="form-select">
+											<option selected>ASSIGNMENTS</option>
+											<option value="1">One</option>
+										</select>
+									</div>
+								</div>
+								<div class="row align-items-center mb-4">
+									<div class="col-3 assignment-edit-keys align-items-center">
+										<p class="assignment-edit-key-name m-0">Display Grade as</p>
+									</div>
+									<div class="col-9 col-lg-6 assignment-edit-values">
+										<select class="form-select">
+											<option selected>Percentage</option>
+											<option value="1">One</option>
+										</select>
+									</div>
+								</div>
+								<div class="row align-items-center mb-4">
+									<div class="col-3 assignment-edit-keys align-items-center">
+										<p class="assignment-edit-key-name m-0"></p>
+									</div>
+									<div class="col-9 col-lg-6 assignment-edit-values">
+										<div class="form-check">
+											<input
+												class="form-check-input"
+												type="checkbox"
+												value=""
+												id="final-grade"
+											/>
+											<label class="form-check-label" for="flexCheckDefault">
+												Do not count this assignment towards the final grade
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row align-items-center mb-4">
+									<div class="col-3 assignment-edit-keys align-self-start">
+										<p class="assignment-edit-key-name m-0">Submission Type</p>
+									</div>
+									<div class="col-9 col-lg-6 assignment-edit-values">
+										<div
+											class="rounded-1 submission-type-container container-fluid"
+										>
+											<div class="row">
+												<div class="col-8">
+													<select class="form-select">
+														<option selected>Online</option>
+														<option value="1">One</option>
+													</select>
+													<p class="ms-2 mt-4 mb-4">
+														<strong>Online Entry Options</strong>
+													</p>
+													<div class="form-check m-2">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															value=""
+															id="final-grade"
+															checked
+														/>
+														<label
+															class="form-check-label"
+															for="flexCheckDefault"
+														>
+															Text Entry
+														</label>
+													</div>
+													<div class="form-check m-2">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															value=""
+															id="final-grade"
+															checked
+														/>
+														<label
+															class="form-check-label"
+															for="flexCheckDefault"
+														>
+															Website URL
+														</label>
+													</div>
+													<div class="form-check m-2">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															value=""
+															id="final-grade"
+															checked
+														/>
+														<label
+															class="form-check-label"
+															for="flexCheckDefault"
+														>
+															Media Recordings
+														</label>
+													</div>
+													<div class="form-check m-2">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															value=""
+															id="final-grade"
+														/>
+														<label
+															class="form-check-label"
+															for="flexCheckDefault"
+														>
+															Student Annotation
+														</label>
+													</div>
+													<div class="form-check m-2">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															value=""
+															id="final-grade"
+														/>
+														<label
+															class="form-check-label"
+															for="flexCheckDefault"
+														>
+															File Uploads
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row align-items-center mb-4">
+									<div class="col-3 assignment-edit-keys align-self-start">
+										<p class="assignment-edit-key-name m-0">Assign</p>
+									</div>
+									<div class="col-9 col-lg-6 assignment-edit-values">
+										<div
+											class="rounded-1 submission-type-container container-fluid m-0 p-1"
+										>
+											<div class="row m-0 p-2 mb-2">
+												<p class="m-0 p-0 mt-1 mb-1">
+													<strong>Assign to</strong>
+												</p>
+												<div class="multi-chip-select">
+													<button type="button" class="btn btn-light">
+														Everyone <i class="fa-solid fa-xmark ms-4"></i>
+													</button>
+												</div>
+											</div>
 
-							<!-- Assignment Group  -->
+											<div class="row m-0 p-2 mb-2">
+												<p class="m-0 p-0 mt-1 mb-1">
+													<strong>Due</strong>
+												</p>
+												<div class="m-0 p-0 mb-3">
+													<input
+														type="date"
+														class="form-control m-0"
+														id="due"
+														value="2023-09-18"
+													/>
+												</div>
+											</div>
 
-							<label style="margin: 1rem 0" for="select-fields-ag"
-								>Assignment Group</label
-							>
-							<br />
-							<select style="margin-bottom: 1rem" id="select-fields-ag">
-								<option selected value="ASSIGNMENTS">
-									ASSIGNMENTS
-								</option></select
-							><br />
-
-							<!-- Display Grade as  -->
-
-							<label for="select-fields-dg">Display Grade as</label>
-							<br />
-							<select style="margin-bottom: 1rem" id="select-fields-dg">
-								<option selected value="PERCENTAGE">Percentage</option></select
-							><br />
-
-							<!-- Submission Type  -->
-
-							<label for="select-fields-st">Submission Type</label>
-							<br />
-							<select style="margin-bottom: 1rem" id="select-fields-st">
-								<option selected value="ONLINE">Online</option></select
-							><br />
-
-							<!-- Online Entry Options  -->
-
-							<label>Online Entry Options</label>
-							<br />
-							<input
-								type="checkbox"
-								value="TEXT"
-								name="check-online-entry"
-								id="chkbox-text"
-							/>
-							<label for="chkbox-text">Text Entry</label> <br />
-							<input
-								type="checkbox"
-								value="URL"
-								name="check-online-entry"
-								id="chkbox-url"
-							/>
-							<label for="chkbox-url">Website URL</label> <br />
-							<input
-								type="checkbox"
-								value="MEDIA"
-								name="check-online-entry"
-								id="chkbox-media"
-							/>
-							<label for="chkbox-media">Media Recordings</label> <br />
-							<input
-								type="checkbox"
-								value="ANNOTATION"
-								name="check-online-entry"
-								id="chkbox-annotation"
-							/>
-							<label for="chkbox-annotation">Student Annotation</label> <br />
-							<input
-								type="checkbox"
-								value="UPLOADS"
-								name="check-online-entry"
-								id="chkbox-file"
-								style="margin-bottom: 1rem"
-							/>
-							<label for="chkbox-file">File Uploads</label> <br />
-
-							<!-- Submission Attempts  -->
-
-							<label for="select-fields-sa">Submission Attempts</label>
-							<br />
-							<select style="margin-bottom: 1rem" id="select-fields-sa">
-								<option selected value="UNLIMITED">Unlimited</option></select
-							><br />
-							<!-- Plagarism Review  -->
-							<label for="select-fields-pr">Plagarism Review</label>
-							<br />
-							<select style="margin-bottom: 1rem" id="select-fields-pr">
-								<option selected value="NONE">Online</option></select
-							><br />
-
-							<!-- Group Assignment  -->
-							<label for="chkbox-group-assignment">Group Assignment</label>
-							<br />
-							<input
-								type="checkbox"
-								value="GROUP_ASSIGNMENT"
-								name="check"
-								id="chkbox-group-assignment"
-								style="margin-bottom: 1rem"
-							/>
-							<label for="chkbox-group-assignment"
-								>This is a group assignment</label
-							>
-
-							<br />
-
-							<!-- Peer Reviews  -->
-							<label for="chkbox-group-assignment">Peer Reviews</label>
-							<br />
-
-							<input
-								type="checkbox"
-								value="PEER_REVIEWS"
-								name="check"
-								id="chkbox-peer-reviews"
-								style="margin-bottom: 1rem"
-							/>
-							<label for="chkbox-peer-reviews">Require Peer Reviews</label>
-
-							<br />
-
-							<!-- Assign  -->
-							<label for="text-fields-assign">Assign</label> <br />
-							<label for="text-fields-assign">Assign to</label>
-							<br />
-							<input
-								style="margin-bottom: 1rem"
-								type="text"
-								id="text-fields-assign"
-								value="Everyone"
-							/><br />
-
-							<!-- Due  -->
-							<label for="text-fields-due">Due</label> <br />
-							<input
-								style="margin-bottom: 1rem"
-								type="date"
-								id="text-fields-due"
-								value="2021-01-01"
-							/><br />
-
-							<!-- Available From  -->
-							<label for="text-fields-available-from">Available From</label>
-							<br />
-							<input
-								style="margin-bottom: 1rem"
-								type="date"
-								id="text-fields-available-from"
-								value="2021-01-01"
-							/><br />
-
-							<!-- Until  -->
-							<label for="text-fields-until">Until</label> <br />
-							<input
-								style="margin-bottom: 1rem"
-								type="date"
-								id="text-fields-until"
-								value="2021-01-01"
-							/><br />
-
-							<button type="submit">Cancel</button>
-							<button type="submit">Save</button>
-						</form>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+											<div class="row m-0 p-2 mb-2">
+												<div class="col-6 m-0 p-0 pe-1">
+													<p class="m-0 p-0 mt-1 mb-1">
+														<strong>Available from</strong>
+													</p>
+													<div class="m-0 p-0 mb-3">
+														<input
+															type="date"
+															class="form-control m-0"
+															id="due"
+															value="2023-09-18"
+														/>
+													</div>
+												</div>
+												<div class="col-6 m-0 p-0 ps-1">
+													<p class="m-0 p-0 mt-1 mb-1">
+														<strong>Until</strong>
+													</p>
+													<div class="m-0 p-0 mb-3">
+														<input
+															type="date"
+															class="form-control m-0"
+															id="due"
+															value="2023-09-18"
+														/>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="container-fluid m-0 p-0">
+											<div class="row m-0 p-0">
+												<button type="button" class="btn btn-light">
+													<i class="fa-solid fa-plus grey me-1"></i> Add
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

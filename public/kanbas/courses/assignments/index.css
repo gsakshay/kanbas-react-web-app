@@ -257,3 +257,30 @@ a {
 .rounded-5{
     border: 1px solid black;
 }
+
+.assignment-title {
+    color: black;
+}
+
+.published-button {
+    border: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.assignment-edit-keys {
+    text-align: right;
+    align-items: start;
+}
+
+.submission-type-container{
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+}
+
+.multi-chip-select {
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+}
