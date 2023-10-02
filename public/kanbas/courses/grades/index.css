@@ -250,15 +250,11 @@ a {
     width: 100%;
 }
 
-.black {
-    color: black;
-}
-
 .list-group-item {
     border-radius: 0 !important;
 }
 
-.rounded-5{
+.rounded-5 {
     border: 1px solid black;
 }
 
@@ -279,7 +275,7 @@ textarea {
     align-items: start;
 }
 
-.submission-type-container{
+.submission-type-container {
     border: 1px solid #ced4da;
     padding: 0.5rem;
 }
@@ -287,4 +283,33 @@ textarea {
 .multi-chip-select {
     border: 1px solid #ced4da;
     padding: 0.5rem;
+}
+
+.black {
+    color: black;
+}
+
+.search-input {
+    border: none;
+    margin: 0 !important;
+}
+
+.search-input:active {
+    outline: none !important;
+}
+
+
+.search-container {
+    border: 1px solid #ced4da;
+}
+
+.search-icon-absolute {
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    font-size: 1.5rem;
+}
+
+.relative {
+    position: relative;
 }
