@@ -26,7 +26,8 @@ a {
 .navbar-content {
     width: 85px;
     height: 100vh;
-    background: black;
+    background: black;    overflow-y: scroll;
+
 }
 
 .navbar-item-container {
@@ -243,7 +244,7 @@ a {
 
 .course-actions {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     padding: 1rem 0 1rem 2rem;
 }
 

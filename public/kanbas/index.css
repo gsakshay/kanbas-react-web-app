@@ -13,9 +13,9 @@ a {
 
 .navbar-content{
     width: 85px;
-    min-height: 100vh;
-    background: black;
-    overflow-y: auto;
+    height: 100vh;
+    background: black;    
+    overflow-y: scroll;
 }
 
 .navbar-item-container{
@@ -69,6 +69,12 @@ a {
 
 .grey{
     color: grey;
+}
+
+@media (max-width: 768px) {
+    .navbar-content {
+        display: none;
+    }
 }
 
 /* Navbar Styles End  */
