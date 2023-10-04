@@ -125,13 +125,14 @@ a {
 }
 
 .nav-element {
-    padding: 0.5rem;
+    padding: 0.25rem;
     margin: 0.25rem;
 }
 
 /* Active Element  */
 .account-nav-active {
     border-left: 2px solid black;
+    padding-left: 0.5rem;
 }
 
 .account-nav-active .nav-element-title {

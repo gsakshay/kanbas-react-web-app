@@ -132,6 +132,8 @@ a {
 /* Active Element  */
 .account-nav-active {
     border-left: 2px solid black;
+    padding-left: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 .account-nav-active .nav-element-title {
