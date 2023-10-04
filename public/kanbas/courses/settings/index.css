@@ -370,3 +370,17 @@ a:hover {
 .hide-caption {
     font-size: 0.8rem;
 }
+
+/* Navbar hiding on smaller screens */
+@media (max-width: 768px) {
+    .navbar-content {
+        display: none;
+    }
+        .account-header {
+            display: none;
+        }
+
+                 .account-header-divider {
+                     display: none;
+                 }
+}

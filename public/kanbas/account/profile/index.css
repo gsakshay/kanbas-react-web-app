@@ -184,3 +184,10 @@ a {
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+/* Navbar hiding on smaller screens */
+@media (max-width: 768px) {
+    .navbar-content {
+        display: none;
+    }
+}

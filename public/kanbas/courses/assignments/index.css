@@ -291,3 +291,17 @@ textarea {
     border: 1px solid #ced4da;
     padding: 0.5rem;
 }
+
+/* Navbar hiding on smaller screens */
+@media (max-width: 768px) {
+    .navbar-content {
+        display: none;
+    }
+        .account-header {
+            display: none;
+        }
+
+                 .account-header-divider {
+                     display: none;
+                 }
+}

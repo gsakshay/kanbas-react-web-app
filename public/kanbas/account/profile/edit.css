@@ -201,3 +201,10 @@ a {
 .link-action-icon{
     font-size: 1rem;
 }
+
+/* Navbar hiding on smaller screens */
+@media (max-width: 768px) {
+    .navbar-content {
+        display: none;
+    }
+}

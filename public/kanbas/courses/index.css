@@ -255,3 +255,19 @@ a {
 .list-group-item {
     border-radius: 0 !important;
 }
+
+/* Navbar hiding on smaller screens */
+@media (max-width: 768px) {
+    .navbar-content {
+        display: none;
+    }
+
+    .account-header {
+        display: none;
+    }
+
+    .account-header-divider {
+        display: none;
+    }
+}
+

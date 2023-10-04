@@ -71,6 +71,7 @@ a {
     color: grey;
 }
 
+/* Navbar hiding on smaller screens */
 @media (max-width: 768px) {
     .navbar-content {
         display: none;
