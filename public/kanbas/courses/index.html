@@ -62,7 +62,7 @@
 					</a>
 				</div>
 				<div class="nav-dashboard navbar-item-container">
-					<a href="../../dashboard/">
+					<a href="../dashboard/">
 						<i class="fa-solid fa-gauge nav-item-icon"></i>
 						<p class="nav-item-text">Dashboard</p>
 					</a>
@@ -117,6 +117,29 @@
 				</div>
 			</div>
 			<div class="scrollable">
+				<div class="pos-f-t mobile-nav">
+					<div class="collapse absolute" id="navbarToggleExternalContent">
+						<div class="bg-dark p-4">
+							<h4 class="text-white">Collapsed content</h4>
+							<span class="text-muted">Toggleable via the navbar brand.</span>
+						</div>
+					</div>
+					<nav class="navbar navbar-dark bg-dark d-md-none p-0 m-0">
+						<a href="mobile-nav.html">
+							<button
+								class="navbar-toggler"
+								type="button"
+								data-toggle="collapse"
+								data-target="#navbarToggleExternalContent"
+								aria-controls="navbarToggleExternalContent"
+								aria-expanded="false"
+								aria-label="Toggle navigation"
+							>
+								<span class="navbar-toggler-icon"></span>
+							</button>
+						</a>
+					</nav>
+				</div>
 				<div class="main-page">
 					<div class="container-fluid">
 						<div class="row account-header">
@@ -215,54 +238,59 @@
 							</div>
 							<div class="col col-12 col-md-10 col-lg-7 container-fluid">
 								<div class="row container">
-									<div class="course-action-buttons">
-										<button
-											type="button"
-											class="btn btn-secondary float-end cab"
-										>
-											<i
-												style="font-size: 1rem"
-												class="fa-solid fa-ellipsis-vertical black"
-											></i>
-										</button>
-										<button type="button" class="btn btn-danger float-end cab">
-											<i class="fa-solid fa-plus white"></i> Module
-										</button>
-
-										<div class="dropdown float-end cab">
+									<div class="col-12">
+										<div class="course-action-buttons">
 											<button
-												class="btn btn-secondary dropdown-toggle"
 												type="button"
-												data-bs-toggle="dropdown"
-												aria-expanded="false"
+												class="btn btn-secondary float-end cab"
 											>
-												<i class="fa-solid fa-check-circle green"></i> Publish
-												All
+												<i
+													style="font-size: 1rem"
+													class="fa-solid fa-ellipsis-vertical black"
+												></i>
 											</button>
-											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="#">Action</a></li>
-												<li>
-													<a class="dropdown-item" href="#">Another action</a>
-												</li>
-												<li>
-													<a class="dropdown-item" href="#"
-														>Something else here</a
-													>
-												</li>
-											</ul>
+											<button
+												type="button"
+												class="btn btn-danger float-end cab"
+											>
+												<i class="fa-solid fa-plus white"></i> Module
+											</button>
+
+											<div class="dropdown float-end cab">
+												<button
+													class="btn btn-secondary dropdown-toggle"
+													type="button"
+													data-bs-toggle="dropdown"
+													aria-expanded="false"
+												>
+													<i class="fa-solid fa-check-circle green"></i> Publish
+													All
+												</button>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li>
+														<a class="dropdown-item" href="#">Another action</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="#"
+															>Something else here</a
+														>
+													</li>
+												</ul>
+											</div>
+											<button
+												type="button"
+												class="btn btn-secondary float-end cab"
+											>
+												View Progress
+											</button>
+											<button
+												type="button"
+												class="btn btn-secondary float-end cab"
+											>
+												Collapse All
+											</button>
 										</div>
-										<button
-											type="button"
-											class="btn btn-secondary float-end cab"
-										>
-											View Progress
-										</button>
-										<button
-											type="button"
-											class="btn btn-secondary float-end cab"
-										>
-											Collapse All
-										</button>
 									</div>
 								</div>
 								<div class="row">

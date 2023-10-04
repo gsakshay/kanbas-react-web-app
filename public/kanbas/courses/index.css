@@ -75,8 +75,8 @@ a {
 }
 
 .nav-item-text {
-    margin: 0.4rem 0;
-    font-size: 0.875;
+    margin: 5px 0;
+    font-size: 0.875 !important;
 }
 
 .grey {
@@ -268,6 +268,19 @@ a {
 
     .account-header-divider {
         display: none;
+    }
+
+    .main-page {
+        padding-top: 0;
+    }
+
+    .mobile-nav {
+        height: 4rem;
+        width: 100%;
+    }
+
+    .mobile-nav-container {
+        width: 100%;
     }
 }
 

@@ -75,8 +75,8 @@ a {
 }
 
 .nav-item-text {
-    margin: 0.4rem 0;
-    font-size: 0.875;
+    margin: 5px 0;
+    font-size: 0.875 !important;
 }
 
 .grey {
@@ -146,7 +146,7 @@ a {
     cursor: pointer;
 }
 /* Navbar hiding on smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .navbar-content {
         display: none;
     }
