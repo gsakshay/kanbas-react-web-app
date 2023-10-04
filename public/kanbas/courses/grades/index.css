@@ -315,3 +315,7 @@ textarea {
 .relative {
     position: relative;
 }
+
+.editable-grade-input {
+    text-align: center;
+}
