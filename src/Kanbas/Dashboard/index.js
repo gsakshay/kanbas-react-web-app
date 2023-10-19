@@ -7,6 +7,7 @@ import db from "../Database"
 
 import "./index.css"
 import { Link } from "react-router-dom"
+import CourseCard from "./CourseCard"
 
 const Dashboard = () => {
 	const courses = db.courses
@@ -36,28 +37,12 @@ const Dashboard = () => {
 										key={index}
 										to={`/Kanbas/Courses/${course._id}`}
 										className='col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3'>
-										<div className='card course-card'>
-											<div className='card-image-container'>
-												<div className='float-end'>
-													<div className='course-card-action'>
-														<i className='fa-solid fa-ellipsis-vertical white course-edit-icon'></i>
-													</div>
-												</div>
-											</div>
-
-											<div className='card-body'>
-												<h5 className='card-title blue pointer'>
-													{course.name}
-												</h5>
-												<p className='card-subtitle mb-2 text-body-secondary grey'>
-													{course.number}
-												</p>
-												<p className='card-text grey'>
-													{course.startDate} to {course.endDate}
-												</p>
-												<i className='fa-solid fa-file-pen course-edit-icon grey'></i>
-											</div>
-										</div>
+										<CourseCard
+											name={course.name}
+											number={course.number}
+											startDate={course.startDate}
+											endDate={course.endDate}
+										/>
 									</Link>
 								))}
 							</div>
