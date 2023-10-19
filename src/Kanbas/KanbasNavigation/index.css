@@ -1,0 +1,61 @@
+.kanbas-navigation {
+    border-radius: 0;
+    background-color: black;
+    height: 100vh;
+    overflow-y: scroll;
+    width: 90px;
+}
+
+/* Navbar Styles  */
+
+.navbar-item-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Nav Item Styles  */
+
+.NavItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+    padding: 5px;
+}
+
+.nav-icon {
+    font-size: 2.5rem !important;
+}
+
+.nav-title {
+    color: white;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.active {
+    background: white !important;
+    color: #D41B2C;
+}
+
+.active > .nav-icon {
+    color: #D41B2C;
+}
+
+.active>.nav-title {
+    color: #D41B2C;
+}
