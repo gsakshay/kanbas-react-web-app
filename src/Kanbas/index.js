@@ -4,9 +4,11 @@ import Dashboard from "./Dashboard"
 import KanbasNavigation from "./KanbasNavigation"
 import { Routes, Route, Navigate } from "react-router"
 
+import "./index.css"
+
 function Kanbas() {
 	return (
-		<div className='d-flex'>
+		<div className='d-flex Kanbas'>
 			<div className='col-1'>
 				<KanbasNavigation />
 			</div>
