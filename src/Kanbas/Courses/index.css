@@ -1,0 +1,286 @@
+.main-container {
+    display: flex;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+    margin: 0
+}
+
+
+/* Purposefully overrding Bootstrap  */
+.col {
+    padding: 0;
+}
+
+
+/* Navbar Styles Start  */
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.navbar-content {
+    width: 85px;
+    height: 100vh;
+    background: black;
+    overflow-y: scroll;
+
+}
+
+.navbar-item-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.navbar-item-container a {
+    color: #ffffff;
+}
+
+.navbar-item-active {
+    background: white;
+}
+
+.navbar-item-active a {
+    color: #D41B2C;
+}
+
+.navbar-item-active .white {
+    color: grey;
+}
+
+/* This maintains the aspect ratio of the image */
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-item-icon {
+    font-size: 1.75rem;
+    color: #D41B2C;
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: #D41B2C;
+}
+
+.nav-item-text {
+    margin: 5px 0;
+    font-size: 0.8rem !important;
+}
+
+.grey {
+    color: grey;
+}
+
+/* Navbar Styles End  */
+
+/* Main Page styles Start  */
+
+.main-page {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+
+.custom-hamburger {
+    font-size: 2.5rem;
+    color: #D41B2C;
+    cursor: pointer;
+}
+
+.profile-name-text {
+    font-size: 1.5rem;
+}
+
+.account-header {
+    margin: 0.5rem 0 1rem 0;
+}
+
+.custom-divider {
+    height: 2px;
+    background: grey;
+}
+
+.nav-element-title {
+    color: #D41B2C;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.second-navigation {
+    width: 200px;
+}
+
+.nav-element {
+    padding: 0.25rem;
+    margin: 0.25rem;
+}
+
+/* Active Element  */
+.secondary-nav-active {
+    border-left: 2px solid black;
+    padding-left: 0.5rem;
+}
+
+.secondary-nav-active .nav-element-title {
+    color: black;
+}
+
+.profile-action-button {
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    color: black;
+    float: right;
+}
+
+.account-icon-container {
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-icon {
+    font-size: 7.5rem;
+    color: grey;
+}
+
+.account-title {
+    padding: 1rem 0;
+}
+
+.basic-details {
+    padding: 1rem 0;
+}
+
+.link-icon {
+    color: grey;
+    font-size: 1rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.scrollable {
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.custom-breadcrumb {
+    font-size: 1.5em;
+}
+
+.navigation-head-text {
+    padding: 1.25rem 0 1.25rem 1.25rem;
+    font-size: 0.75rem;
+}
+
+.inline {
+    display: inline;
+}
+
+.green {
+    color: green;
+}
+
+.fs-1 {
+    font-size: 1rem;
+}
+
+.fs-150 {
+    font-size: 1.5rem;
+}
+
+.fs-2 {
+    font-size: 2rem;
+}
+
+.cab {
+    margin: 0 0.25rem;
+}
+
+.ma-10 {
+    margin: 1rem 0;
+}
+
+.ma-050 {
+    margin: 0 0.5rem;
+}
+
+.indent {
+    padding-left: 2rem;
+}
+
+.pa-075 {
+    padding: 0 0.75rem;
+}
+
+.module-group {
+    margin: 2rem 0;
+}
+
+.done {
+    border-left: 4px solid green;
+}
+
+.course-actions {
+    width: 100%;
+    height: 100vh;
+    padding: 1rem 0 1rem 2rem;
+}
+
+.fw {
+    width: 100%;
+}
+
+.list-group-item {
+    border-radius: 0 !important;
+}
+
+/* Navbar hiding on smaller screens */
+@media (max-width: 768px) {
+    .navbar-content {
+        display: none;
+    }
+
+    .account-header {
+        display: none;
+    }
+
+    .account-header-divider {
+        display: none;
+    }
+
+    .main-page {
+        padding-top: 0;
+    }
+
+    .mobile-nav {
+        height: 4rem;
+        width: 100%;
+    }
+
+    .mobile-nav-container {
+        width: 100%;
+    }
+}
