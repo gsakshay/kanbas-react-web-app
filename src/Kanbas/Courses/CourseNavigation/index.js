@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react"
-import { useLocation, useParams } from "react-router"
+import { useLocation, useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 
 export default function CourseNavigation({ number }) {
@@ -18,7 +18,8 @@ export default function CourseNavigation({ number }) {
 		"Settings",
 	]
 	const { courseId } = useParams()
-	const { pathName } = useLocation()
+	const { pathname } = useLocation()
+
 	return (
 		<div className='second-navigation'>
 			<div className='navigation-head-text'>
@@ -28,7 +29,7 @@ export default function CourseNavigation({ number }) {
 				<div
 					key={index}
 					className={`nav-element ${
-						pathName?.includes(link) && "secondary-nav-active"
+						pathname?.includes(link) && "secondary-nav-active"
 					}`}>
 					<Link to={`/Kanbas/Courses/${courseId}/${link}`}>
 						<p className='nav-element-title'>{link}</p>

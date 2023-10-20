@@ -188,6 +188,8 @@ a {
 
 .custom-breadcrumb {
     font-size: 1.5em;
+    display: flex;
+    align-items: center;
 }
 
 .navigation-head-text {

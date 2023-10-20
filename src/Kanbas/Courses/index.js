@@ -3,17 +3,22 @@
 import React from "react"
 
 import db from "../Database"
-import { Navigate, Route, Routes, useParams } from "react-router"
+import { Navigate, Route, Routes, useLocation, useParams } from "react-router"
 
 import "./index.css"
 import CourseNavigation from "./CourseNavigation"
 import Home from "./Home"
+import { Link } from "react-router-dom"
+import Modules from "./Modules"
 
 const Courses = () => {
 	const { courseId } = useParams()
 	const { name, number, startDate, endDate } = db.courses.find(
 		(c) => c._id === courseId
 	)
+
+	const { pathname } = useLocation()
+
 	return (
 		<div className='scrollable'>
 			<div className='pos-f-t mobile-nav'>
@@ -41,17 +46,19 @@ const Courses = () => {
 			<div className='main-page'>
 				<div className='container-fluid'>
 					<div className='row account-header'>
-						<div className='col col-sm-1'>
+						<div className='col col-sm-1 mt-1 mb-1'>
 							<i className='fa-solid fa-bars custom-hamburger'></i>
 						</div>
-						<div className='col col-sm-11 custom-breadcrumb'>
-							<nav aria-label='breadcrumb'>
-								<ol className='breadcrumb'>
+						<div className='col col-sm-11 custom-breadcrumb m-0'>
+							<nav aria-label='breadcrumb m-0'>
+								<ol className='breadcrumb mt-1 mb-1'>
 									<li className='breadcrumb-item red'>
-										<a href='#'>{number + " " + name}</a>
+										<Link href='#'>
+											<p className='red m-0'>{number + " " + name}</p>
+										</Link>
 									</li>
 									<li className='breadcrumb-item active' aria-current='page'>
-										Home
+										{pathname.split("/")[pathname.split("/").length - 1]}
 									</li>
 								</ol>
 							</nav>
@@ -71,7 +78,13 @@ const Courses = () => {
 							<Routes>
 								{/* <Route path='/' element={<Navigate to='Home' />} /> */}
 								<Route path='Home' element={<Home />} />
-								<Route path='Modules' element={<h1>Modules</h1>} />
+								<Route path='Modules' element={<Modules />} />
+								<Route path='Assignments' element={<h1>Assignments</h1>} />
+								<Route
+									path='Assignments/:assignmentId'
+									element={<h1>Assignment Editor</h1>}
+								/>
+								<Route path='Grades' element={<h1>Grades</h1>} />
 							</Routes>
 						</div>
 					</div>
