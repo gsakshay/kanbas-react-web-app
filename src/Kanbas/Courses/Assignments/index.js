@@ -6,6 +6,7 @@ import "./index.css"
 import { useParams } from "react-router"
 
 import db from "../../Database"
+import { Link } from "react-router-dom"
 
 function Assignments() {
 	const { courseId } = useParams()
@@ -59,35 +60,38 @@ function Assignments() {
 					{assignments
 						.filter((assignment) => assignment.course === courseId)
 						.map((assignment, index) => (
-							<li
+							<Link
 								key={index}
-								className='list-group-item done container-fluid p-0 m-0'>
-								<div className='row p-0 m-0 align-items-center'>
-									<div className='col-1 p-0 m-0 text-center'>
-										<i className='fa-solid fa-book green ps-2'></i>
-									</div>
-									<div className='col-10 p-0 m-0 pt-2 pb-2'>
-										<div className='assignment-desc'>
-											<a href='edit.html'>
-												<strong className='assignment-title'>
-													{assignment?.title}
-												</strong>
-											</a>
-											{/* <p className='p-0 m-0'>
+								to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
+								<li className='list-group-item done container-fluid p-0 m-0'>
+									<div className='row p-0 m-0 align-items-center'>
+										<div className='col-1 p-0 m-0 text-center'>
+											<i className='fa-solid fa-book green ps-2'></i>
+										</div>
+										<div className='col-10 p-0 m-0 pt-2 pb-2'>
+											<div className='assignment-desc'>
+												<a href='edit.html'>
+													<strong className='assignment-title'>
+														{assignment?.title}
+													</strong>
+												</a>
+												{/* <p className='p-0 m-0'>
 												Week 0 - SETUP - Week Starting on Sept 5th Module
 											</p> */}
-											<p className='p-0 m-0 mt-1 mb-1'>
-												<span className='red'>Multiple Modules</span> |{" "}
-												<strong>Due</strong> Sept 25, 2023 at 11:59pm | 100 pts
-											</p>
+												<p className='p-0 m-0 mt-1 mb-1'>
+													<span className='red'>Multiple Modules</span> |{" "}
+													<strong>Due</strong> Sept 25, 2023 at 11:59pm | 100
+													pts
+												</p>
+											</div>
+										</div>
+										<div className='col-1 p-0 m-0 text-center'>
+											<i className='fa-solid fa-check-circle green'></i>
+											<i className='fa-solid fa-ellipsis-vertical black ma-050'></i>
 										</div>
 									</div>
-									<div className='col-1 p-0 m-0 text-center'>
-										<i className='fa-solid fa-check-circle green'></i>
-										<i className='fa-solid fa-ellipsis-vertical black ma-050'></i>
-									</div>
-								</div>
-							</li>
+								</li>
+							</Link>
 						))}
 				</ul>
 			</div>
