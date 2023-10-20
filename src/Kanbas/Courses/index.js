@@ -10,6 +10,7 @@ import CourseNavigation from "./CourseNavigation"
 import Home from "./Home"
 import { Link } from "react-router-dom"
 import Modules from "./Modules"
+import Assignments from "./Assignments"
 
 const Courses = () => {
 	const { courseId } = useParams()
@@ -79,7 +80,7 @@ const Courses = () => {
 								{/* <Route path='/' element={<Navigate to='Home' />} /> */}
 								<Route path='Home' element={<Home />} />
 								<Route path='Modules' element={<Modules />} />
-								<Route path='Assignments' element={<h1>Assignments</h1>} />
+								<Route path='Assignments' element={<Assignments />} />
 								<Route
 									path='Assignments/:assignmentId'
 									element={<h1>Assignment Editor</h1>}
