@@ -4,7 +4,6 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    overflow: hidden;
     margin: 0
 }
 
@@ -293,7 +292,7 @@ textarea {
 }
 
 .search-input {
-    border: none;
+    border: none !important;
     margin: 0 !important;
 }
 
@@ -303,14 +302,14 @@ textarea {
 
 
 .search-container {
-    border: 1px solid #ced4da;
+    border: 1px solid #ced4da !important;
 }
 
 .search-icon-absolute {
-    position: absolute;
-    top: 0.75rem;
-    left: 1rem;
-    font-size: 1.5rem;
+    position: absolute !important;
+    top: 0.75rem !important;
+    left: 1rem !important;
+    font-size: 1.5rem !important;
 }
 
 .relative {

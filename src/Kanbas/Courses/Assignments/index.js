@@ -16,30 +16,32 @@ function Assignments() {
 		<div className='col col-12  container-fluid'>
 			<div className='row container-fluid p-0 m-0'>
 				<div className='row p-0'>
-					<div className='col-12 p-0'>
+					<div className='col-12 p-0 d-flex mt-2 mb-2'>
 						<input
 							type='email'
 							className='form-control w-25 inline'
 							id='exampleFormControlInput1'
 							placeholder='Search for Assignment'
 						/>
-						<button
-							type='button'
-							className='btn btn-light float-end cab inline'>
-							<i
-								style={{ fontSize: "1rem" }}
-								className='fa-solid fa-ellipsis-vertical black'></i>
-						</button>
-						<button
-							type='button'
-							className='btn btn-danger float-end cab inline'>
-							<i className='fa-solid fa-plus white'></i> Assignment
-						</button>
-						<button
-							type='button'
-							className='btn btn-light float-end cab inline'>
-							<i className='fa-solid fa-plus black'></i> Group
-						</button>
+						<div className='float-end full-width'>
+							<button
+								type='button'
+								className='btn btn-light float-end cab inline'>
+								<i
+									style={{ fontSize: "1rem" }}
+									className='fa-solid fa-ellipsis-vertical black'></i>
+							</button>
+							<button
+								type='button'
+								className='btn btn-danger float-end cab inline'>
+								<i className='fa-solid fa-plus white'></i> Assignment
+							</button>
+							<button
+								type='button'
+								className='btn btn-light float-end cab inline'>
+								<i className='fa-solid fa-plus black'></i> Group
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -70,11 +72,9 @@ function Assignments() {
 										</div>
 										<div className='col-10 p-0 m-0 pt-2 pb-2'>
 											<div className='assignment-desc'>
-												<a href='edit.html'>
-													<strong className='assignment-title'>
-														{assignment?.title}
-													</strong>
-												</a>
+												<strong className='assignment-title'>
+													{assignment?.title}
+												</strong>
 												{/* <p className='p-0 m-0'>
 												Week 0 - SETUP - Week Starting on Sept 5th Module
 											</p> */}

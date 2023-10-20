@@ -4,7 +4,6 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    overflow: hidden;
     margin: 0
 }
 
@@ -240,7 +239,7 @@ a {
 }
 
 .done {
-    border-left: 4px solid green;
+    border-left: 4px solid green !important;
 }
 
 .course-actions {
@@ -290,6 +289,10 @@ textarea {
 .multi-chip-select {
     border: 1px solid #ced4da;
     padding: 0.5rem;
+}
+
+.full-width {
+    width: 100% !important;
 }
 
 /* Navbar hiding on smaller screens */

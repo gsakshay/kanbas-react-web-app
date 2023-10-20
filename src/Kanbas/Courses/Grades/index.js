@@ -112,12 +112,6 @@ function Grades() {
 										<p className='m-0 mt-1 mb-1 p-0'>Out of 100</p>
 									</div>
 								</td>
-								<td>
-									<div className='text-center'>
-										<strong>A4 BOOTSTRAP</strong>
-										<p className='m-0 mt-1 mb-1 p-0'>Out of 100</p>
-									</div>
-								</td>
 							</tr>
 
 							{enrollments.map((enrollment) => {
