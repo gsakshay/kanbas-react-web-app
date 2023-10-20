@@ -11,6 +11,7 @@ import Home from "./Home"
 import { Link } from "react-router-dom"
 import Modules from "./Modules"
 import Assignments from "./Assignments"
+import AssignmentEditor from "./Assignments/AssignmentEditor"
 
 const Courses = () => {
 	const { courseId } = useParams()
@@ -83,7 +84,7 @@ const Courses = () => {
 								<Route path='Assignments' element={<Assignments />} />
 								<Route
 									path='Assignments/:assignmentId'
-									element={<h1>Assignment Editor</h1>}
+									element={<AssignmentEditor />}
 								/>
 								<Route path='Grades' element={<h1>Grades</h1>} />
 							</Routes>
