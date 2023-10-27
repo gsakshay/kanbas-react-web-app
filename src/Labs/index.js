@@ -1,24 +1,19 @@
 /** @format */
 
-import JavaScript from "./a3/JavaScript"
-import PathParameters from "./a3/PathParameters"
-import Classes from "./a3/Classes"
 import Nav from "../Nav"
-import Styles from "./a3/Styles"
-import ConditionalOutput from "./a3/ConditionalOutput"
-import TodoList from "./a3/todos/TodoList"
-function Assignment3() {
+import Assignment3 from "./a3"
+import Assignment4 from "./a4"
+import { Routes, Route, Navigate } from "react-router"
+function Labs() {
 	return (
 		<div>
-			<h1>Assignment 3</h1>
 			<Nav />
-			<TodoList />
-			<ConditionalOutput />
-			<Styles />
-			<Classes />
-			<PathParameters />
-			<JavaScript />
+			<Routes>
+				<Route path='/' element={<Navigate to='a3' />} />
+				<Route path='a3' element={<Assignment3 />} />
+				<Route path='a4' element={<Assignment4 />} />
+			</Routes>
 		</div>
 	)
 }
-export default Assignment3
+export default Labs
