@@ -16,6 +16,7 @@ import ParentStateComponent from "./ParentStateComponent"
 import ReduxExamples from "./ReduxExamples"
 
 function Assignment4() {
+	// Assignment 4 - Lab
 	function sayHello() {
 		alert("Hello")
 	}
