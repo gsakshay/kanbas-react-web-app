@@ -10,7 +10,6 @@ const CourseCard = ({
 	endDate,
 	setCourse,
 	deleteCourse,
-	setUpdateScreen,
 }) => {
 	return (
 		<div className='card course-card'>
@@ -28,7 +27,7 @@ const CourseCard = ({
 				<p className='card-text grey'>
 					{startDate} to {endDate}
 				</p>
-				<div className='float-end'>
+				<div className='float-end container'>
 					<button
 						type='button'
 						onClick={(event) => {
@@ -41,7 +40,6 @@ const CourseCard = ({
 								startDate,
 								endDate,
 							})
-							setUpdateScreen((us) => !us)
 						}}
 						className='btn btn-warning m-2'>
 						Edit

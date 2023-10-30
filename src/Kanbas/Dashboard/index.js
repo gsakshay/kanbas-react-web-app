@@ -9,45 +9,14 @@ import "./index.css"
 import { Link } from "react-router-dom"
 import CourseCard from "./CourseCard"
 
-const Dashboard = () => {
-	const [updateScreen, setUpdateScreen] = useState(false)
-
-	const [courses, setCourses] = useState(db.courses)
-	const [course, setCourse] = useState({
-		name: "",
-		number: "",
-		startDate: "2023-09-10",
-		endDate: "2023-12-15",
-	})
-	const addNewCourse = () => {
-		setCourses([...courses, { ...course, _id: new Date().getTime() }])
-		setCourse({
-			name: "",
-			number: "",
-			startDate: "2023-09-10",
-			endDate: "2023-12-15",
-		})
-	}
-	const deleteCourse = (courseId) => {
-		setCourses(courses.filter((course) => course._id !== courseId))
-	}
-	const updateCourse = () => {
-		console.log("incoming")
-		console.log(course._id)
-		console.log(courses)
-		setCourses(
-			courses.map((c) => {
-				if (c._id === course._id) {
-					console.log("Found course", c)
-					return course
-				} else {
-					return c
-				}
-			})
-		)
-		setUpdateScreen((us) => !us)
-	}
-
+const Dashboard = ({
+	courses,
+	course,
+	setCourse,
+	addNewCourse,
+	deleteCourse,
+	updateCourse,
+}) => {
 	return (
 		<div className='Dashboard'>
 			<div className='scrollable'>
@@ -75,27 +44,25 @@ const Dashboard = () => {
 								<div className='col-10'>
 									<h5>Add a new Course</h5>
 								</div>
-								<div className='col-2'>
-									{!updateScreen ? (
-										<button
-											type='button'
-											onClick={addNewCourse}
-											className='btn btn-success float-end full-width'>
-											Add
-										</button>
-									) : (
-										<></>
-									)}
-									{updateScreen ? (
-										<button
-											type='button'
-											onClick={updateCourse}
-											className='btn btn-primary float-end full-width'>
-											Update
-										</button>
-									) : (
-										<></>
-									)}
+								<div className='col-2 container'>
+									<div className='row'>
+										<div className='col-6'>
+											<button
+												type='button'
+												onClick={addNewCourse}
+												className='btn btn-success float-end full-width'>
+												Add
+											</button>
+										</div>
+										<div className='col-6'>
+											<button
+												type='button'
+												onClick={updateCourse}
+												className='btn btn-primary float-end full-width'>
+												Update
+											</button>
+										</div>
+									</div>
 								</div>
 								<div className='col-6 p-2'>
 									<label for='course-name'>Course Name</label>
@@ -158,7 +125,6 @@ const Dashboard = () => {
 											endDate={course.endDate}
 											setCourse={setCourse}
 											deleteCourse={deleteCourse}
-											setUpdateScreen={setUpdateScreen}
 										/>
 									</Link>
 								))}
