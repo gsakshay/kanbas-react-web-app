@@ -26,6 +26,22 @@ const ModuleList = () => {
 		})
 	}
 
+	const deleteModule = (moduleId) => {
+		setModules(modules.filter((module) => module._id !== moduleId))
+	}
+
+	const updateModule = () => {
+		setModules(
+			modules.map((m) => {
+				if (m._id === module._id) {
+					return module
+				} else {
+					return m
+				}
+			})
+		)
+	}
+
 	return (
 		<div className='row m-0 p-0'>
 			<div className='col col-12 container-fluid'>
@@ -85,11 +101,17 @@ const ModuleList = () => {
 					</div>
 					<div className='col-6'>
 						<button
+							onClick={() => updateModule()}
+							type='button'
+							className='btn btn-primary float-end ms-2 me-2'>
+							Update
+						</button>
+						<button
 							onClick={() => addModule(module)}
 							type='button'
-							className='btn btn-success float-end'>
+							className='btn btn-success float-end ms-2 me-2'>
 							Add
-						</button>
+						</button>{" "}
 					</div>
 
 					<div className='col-12'>
@@ -144,6 +166,22 @@ const ModuleList = () => {
 									<i className='fa-solid fa-plus grey float-end ma-050'></i>
 									<i className='fa-solid fa-caret-down float-end ma-050'></i>
 									<i className='fa-solid fa-check-circle green float-end'></i>
+									<button
+										type='button'
+										className='btn btn-success float-end ms-1 me-4 p-1'
+										onClick={(event) => {
+											setModule(module)
+										}}>
+										{" "}
+										Edit
+									</button>
+									<button
+										type='button'
+										className='btn btn-danger float-end ms-1 me-2 p-1'
+										onClick={() => deleteModule(module._id)}>
+										{" "}
+										Delete
+									</button>
 								</li>
 							</ul>
 						))}

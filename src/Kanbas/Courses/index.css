@@ -285,3 +285,9 @@ a {
         width: 100%;
     }
 }
+
+.module-list-entry {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
