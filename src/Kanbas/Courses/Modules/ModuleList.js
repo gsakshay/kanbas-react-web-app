@@ -4,43 +4,55 @@ import React, { useState } from "react"
 import { useParams } from "react-router"
 import db from "../../Database"
 
+import { useSelector, useDispatch } from "react-redux"
+import {
+	addModule,
+	deleteModule,
+	updateModule,
+	setModule,
+} from "./ModulesReducer"
+
 const ModuleList = () => {
 	const { courseId } = useParams()
-	const [modules, setModules] = useState(db.modules)
+	// const [modules, setModules] = useState(db.modules)
 
-	const [module, setModule] = useState({
-		name: "",
-		description: "",
-		course: courseId,
-	})
+	// const [module, setModule] = useState({
+	// 	name: "",
+	// 	description: "",
+	// 	course: courseId,
+	// })
 
-	const addModule = (module) => {
-		setModules([
-			...modules,
-			{ ...module, _id: new Date().getTime().toString() },
-		])
-		setModule({
-			name: "",
-			description: "",
-			course: courseId,
-		})
-	}
+	// const addModule = (module) => {
+	// 	setModules([
+	// 		...modules,
+	// 		{ ...module, _id: new Date().getTime().toString() },
+	// 	])
+	// 	setModule({
+	// 		name: "",
+	// 		description: "",
+	// 		course: courseId,
+	// 	})
+	// }
 
-	const deleteModule = (moduleId) => {
-		setModules(modules.filter((module) => module._id !== moduleId))
-	}
+	// const deleteModule = (moduleId) => {
+	// 	setModules(modules.filter((module) => module._id !== moduleId))
+	// }
 
-	const updateModule = () => {
-		setModules(
-			modules.map((m) => {
-				if (m._id === module._id) {
-					return module
-				} else {
-					return m
-				}
-			})
-		)
-	}
+	// const updateModule = () => {
+	// 	setModules(
+	// 		modules.map((m) => {
+	// 			if (m._id === module._id) {
+	// 				return module
+	// 			} else {
+	// 				return m
+	// 			}
+	// 		})
+	// 	)
+	// }
+
+	const modules = useSelector((state) => state.modulesReducer.modules)
+	const module = useSelector((state) => state.modulesReducer.module)
+	const dispatch = useDispatch()
 
 	return (
 		<div className='row m-0 p-0'>
@@ -101,13 +113,15 @@ const ModuleList = () => {
 					</div>
 					<div className='col-6'>
 						<button
-							onClick={() => updateModule()}
+							onClick={() => dispatch(updateModule(module))}
 							type='button'
 							className='btn btn-primary float-end ms-2 me-2'>
 							Update
 						</button>
 						<button
-							onClick={() => addModule(module)}
+							onClick={() =>
+								dispatch(addModule({ ...module, course: courseId }))
+							}
 							type='button'
 							className='btn btn-success float-end ms-2 me-2'>
 							Add
@@ -126,10 +140,7 @@ const ModuleList = () => {
 								placeholder='New Module'
 								value={module.name}
 								onChange={(e) =>
-									setModule({
-										...module,
-										name: e.target.value,
-									})
+									dispatch(setModule({ ...module, name: e.target.value }))
 								}
 							/>
 						</div>
@@ -144,10 +155,9 @@ const ModuleList = () => {
 								rows='3'
 								value={module.description}
 								onChange={(e) =>
-									setModule({
-										...module,
-										description: e.target.value,
-									})
+									dispatch(
+										setModule({ ...module, description: e.target.value })
+									)
 								}
 							/>
 						</div>
@@ -170,7 +180,7 @@ const ModuleList = () => {
 										type='button'
 										className='btn btn-success float-end ms-1 me-4 p-1'
 										onClick={(event) => {
-											setModule(module)
+											dispatch(setModule(module))
 										}}>
 										{" "}
 										Edit
@@ -178,7 +188,7 @@ const ModuleList = () => {
 									<button
 										type='button'
 										className='btn btn-danger float-end ms-1 me-2 p-1'
-										onClick={() => deleteModule(module._id)}>
+										onClick={() => dispatch(deleteModule(module._id))}>
 										{" "}
 										Delete
 									</button>
