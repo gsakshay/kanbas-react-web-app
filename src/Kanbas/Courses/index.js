@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import db from "../Database"
 import { Navigate, Route, Routes, useLocation, useParams } from "react-router"
@@ -14,10 +14,22 @@ import Assignments from "./Assignments"
 import AssignmentEditor from "./Assignments/AssignmentEditor"
 import Grades from "./Grades"
 
+import axios from "axios"
+
 const Courses = ({ courses }) => {
+	const URL = "http://localhost:4000/api/courses"
+
 	const { courseId } = useParams()
 
-	const course = courses.find((course) => course._id === courseId)
+	const [course, setCourse] = useState({})
+	const findCourseById = async (courseId) => {
+		const response = await axios.get(`${URL}/${courseId}`)
+		setCourse(response.data)
+	}
+	useEffect(() => {
+		findCourseById(courseId)
+	}, [courseId])
+
 	const { name, number, startDate, endDate } = course
 
 	const { pathname } = useLocation()
