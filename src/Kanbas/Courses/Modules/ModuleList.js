@@ -37,7 +37,6 @@ const ModuleList = () => {
 	}
 
 	const handleDeleteModule = (moduleId) => {
-		console.log("Delete a module")
 		Client.deleteModule(moduleId).then((status) => {
 			console.log("Dispatching DELETE")
 			dispatch(deleteModule(moduleId))
@@ -45,9 +44,13 @@ const ModuleList = () => {
 	}
 
 	const handleUpdateModule = async () => {
-		console.log("Handle update is called")
-		const status = await Client.updateModule(module)
-		dispatch(updateModule(module))
+		try {
+			const status = await Client.updateModule(module)
+			console.log(status)
+			dispatch(updateModule(module))
+		} catch (e) {
+			console.log("There was en error in updating the module", e)
+		}
 	}
 
 	return (

@@ -11,10 +11,6 @@ const modulesSlice = createSlice({
 	initialState,
 	reducers: {
 		setModules: (state, action) => {
-			console.log(
-				action.payload,
-				"These are the payloads for me, are these modules?"
-			)
 			state.modules = action.payload
 		},
 		addModule: (state, action) => {
