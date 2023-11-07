@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 function WorkingWithArrays() {
-	const API = "http://localhost:4000/a5/todos"
+	const API = `${process.env.REACT_APP_BASE_URL}/a5/todos`
 
 	const [todo, setTodo] = useState({
 		id: 1,

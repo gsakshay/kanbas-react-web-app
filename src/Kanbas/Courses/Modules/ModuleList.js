@@ -10,49 +10,45 @@ import {
 	deleteModule,
 	updateModule,
 	setModule,
+	setModules,
 } from "./ModulesReducer"
+
+import * as Client from "./client"
+import { useEffect } from "react"
 
 const ModuleList = () => {
 	const { courseId } = useParams()
-	// const [modules, setModules] = useState(db.modules)
 
-	// const [module, setModule] = useState({
-	// 	name: "",
-	// 	description: "",
-	// 	course: courseId,
-	// })
-
-	// const addModule = (module) => {
-	// 	setModules([
-	// 		...modules,
-	// 		{ ...module, _id: new Date().getTime().toString() },
-	// 	])
-	// 	setModule({
-	// 		name: "",
-	// 		description: "",
-	// 		course: courseId,
-	// 	})
-	// }
-
-	// const deleteModule = (moduleId) => {
-	// 	setModules(modules.filter((module) => module._id !== moduleId))
-	// }
-
-	// const updateModule = () => {
-	// 	setModules(
-	// 		modules.map((m) => {
-	// 			if (m._id === module._id) {
-	// 				return module
-	// 			} else {
-	// 				return m
-	// 			}
-	// 		})
-	// 	)
-	// }
+	useEffect(() => {
+		Client.findModulesForCourse(courseId).then((modules) => {
+			dispatch(setModules(modules))
+		})
+	}, [courseId])
 
 	const modules = useSelector((state) => state.modulesReducer.modules)
 	const module = useSelector((state) => state.modulesReducer.module)
+
 	const dispatch = useDispatch()
+
+	const handleAddModule = () => {
+		Client.createModule(courseId, module).then((module) => {
+			dispatch(addModule(module))
+		})
+	}
+
+	const handleDeleteModule = (moduleId) => {
+		console.log("Delete a module")
+		Client.deleteModule(moduleId).then((status) => {
+			console.log("Dispatching DELETE")
+			dispatch(deleteModule(moduleId))
+		})
+	}
+
+	const handleUpdateModule = async () => {
+		console.log("Handle update is called")
+		const status = await Client.updateModule(module)
+		dispatch(updateModule(module))
+	}
 
 	return (
 		<div className='row m-0 p-0'>
@@ -113,15 +109,13 @@ const ModuleList = () => {
 					</div>
 					<div className='col-6'>
 						<button
-							onClick={() => dispatch(updateModule(module))}
+							onClick={handleUpdateModule}
 							type='button'
 							className='btn btn-primary float-end ms-2 me-2'>
 							Update
 						</button>
 						<button
-							onClick={() =>
-								dispatch(addModule({ ...module, course: courseId }))
-							}
+							onClick={handleAddModule}
 							type='button'
 							className='btn btn-success float-end ms-2 me-2'>
 							Add
@@ -130,7 +124,7 @@ const ModuleList = () => {
 
 					<div className='col-12'>
 						<div className='mb-3'>
-							<label for='exampleFormControlInput1' className='form-label'>
+							<label htmlFor='exampleFormControlInput1' className='form-label'>
 								Module Name
 							</label>
 							<input
@@ -145,7 +139,9 @@ const ModuleList = () => {
 							/>
 						</div>
 						<div className='mb-3'>
-							<label for='exampleFormControlTextarea1' className='form-label'>
+							<label
+								htmlFor='exampleFormControlTextarea1'
+								className='form-label'>
 								Module Description
 							</label>
 							<textarea
@@ -188,7 +184,7 @@ const ModuleList = () => {
 									<button
 										type='button'
 										className='btn btn-danger float-end ms-1 me-2 p-1'
-										onClick={() => dispatch(deleteModule(module._id))}>
+										onClick={() => handleDeleteModule(module._id)}>
 										{" "}
 										Delete
 									</button>

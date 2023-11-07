@@ -17,7 +17,9 @@ import axios from "axios"
 function Kanbas() {
 	const [courses, setCourses] = useState([])
 
-	const URL = "http://localhost:4000/api/courses"
+	const BASE_URL = process.env.REACT_APP_BASE_URL
+	const URL = BASE_URL + "/api/courses"
+
 	const findAllCourses = async () => {
 		const response = await axios.get(URL)
 		setCourses(response.data)
@@ -95,7 +97,7 @@ function Kanbas() {
 							}
 						/>
 						<Route
-							path='Courses/:courseId*'
+							path='Courses/:courseId/*'
 							element={<Courses courses={courses} />}
 						/>
 					</Routes>

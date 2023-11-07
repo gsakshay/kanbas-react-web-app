@@ -45,7 +45,7 @@ function Grades() {
 			</div>
 			<div className='row'>
 				<div className='col-6 pe-2 relative'>
-					<label for='student-names' className='form-label'>
+					<label htmlFor='student-names' className='form-label'>
 						<h4>Student Names</h4>
 					</label>
 					<div className='search-container relative m-0 p-0 ps-5 rounded-1'>
@@ -61,7 +61,7 @@ function Grades() {
 					</div>
 				</div>
 				<div className='col-6 ps-2'>
-					<label for='student-names' className='form-label'>
+					<label htmlFor='student-names' className='form-label'>
 						<h4>Assignment Names</h4>
 					</label>
 					<div className='search-container relative m-0 p-0 ps-5 rounded-1'>

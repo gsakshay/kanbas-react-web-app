@@ -12,7 +12,7 @@ function WorkingWithObjects() {
 		completed: false,
 		score: 0,
 	})
-	const URL = "http://localhost:4000/a5/assignment"
+	const URL = `${process.env.REACT_APP_BASE_URL}/a5/assignment`
 
 	const fetchAssignment = async () => {
 		const response = await axios.get(`${URL}`)
@@ -32,14 +32,14 @@ function WorkingWithObjects() {
 			<h3>Working With Objects</h3>
 			<h4>Retrieving Objects</h4>
 			<a
-				href='http://localhost:4000/a5/assignment'
+				href={`${process.env.REACT_APP_BASE_URL}/a5/assignment`}
 				className='btn btn-primary me-2'>
 				Get Assignment
 			</a>
 
 			<h4>Retrieving Properties</h4>
 			<a
-				href='http://localhost:4000/a5/assignment/title'
+				href={`${process.env.REACT_APP_BASE_URL}/a5/assignment/title`}
 				className='btn btn-primary me-2'>
 				Get Title
 			</a>

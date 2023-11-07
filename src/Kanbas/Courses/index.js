@@ -17,7 +17,7 @@ import Grades from "./Grades"
 import axios from "axios"
 
 const Courses = ({ courses }) => {
-	const URL = "http://localhost:4000/api/courses"
+	const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`
 
 	const { courseId } = useParams()
 

@@ -46,7 +46,7 @@ function AssignmentEditor() {
 			</div>
 			<div className='row'>
 				<div className='mb-3'>
-					<label for='assignment-name' className='form-label'>
+					<label htmlhtmlFor='assignment-name' className='form-label'>
 						Assignment Name
 					</label>
 					<input
@@ -112,7 +112,7 @@ function AssignmentEditor() {
 							value=''
 							id='final-grade'
 						/>
-						<label className='form-check-label' for='flexCheckDefault'>
+						<label className='form-check-label' htmlFor='flexCheckDefault'>
 							Do not count this assignment towards the final grade
 						</label>
 					</div>
@@ -141,7 +141,9 @@ function AssignmentEditor() {
 										id='final-grade'
 										checked
 									/>
-									<label className='form-check-label' for='flexCheckDefault'>
+									<label
+										className='form-check-label'
+										htmlFor='flexCheckDefault'>
 										Text Entry
 									</label>
 								</div>
@@ -153,7 +155,9 @@ function AssignmentEditor() {
 										id='final-grade'
 										checked
 									/>
-									<label className='form-check-label' for='flexCheckDefault'>
+									<label
+										className='form-check-label'
+										htmlFor='flexCheckDefault'>
 										Website URL
 									</label>
 								</div>
@@ -165,7 +169,9 @@ function AssignmentEditor() {
 										id='final-grade'
 										checked
 									/>
-									<label className='form-check-label' for='flexCheckDefault'>
+									<label
+										className='form-check-label'
+										htmlFor='flexCheckDefault'>
 										Media Recordings
 									</label>
 								</div>
@@ -176,7 +182,9 @@ function AssignmentEditor() {
 										value=''
 										id='final-grade'
 									/>
-									<label className='form-check-label' for='flexCheckDefault'>
+									<label
+										className='form-check-label'
+										htmlFor='flexCheckDefault'>
 										Student Annotation
 									</label>
 								</div>
@@ -187,7 +195,9 @@ function AssignmentEditor() {
 										value=''
 										id='final-grade'
 									/>
-									<label className='form-check-label' for='flexCheckDefault'>
+									<label
+										className='form-check-label'
+										htmlFor='flexCheckDefault'>
 										File Uploads
 									</label>
 								</div>
@@ -277,7 +287,7 @@ function AssignmentEditor() {
 							value=''
 							id='notify'
 						/>
-						<label className='form-check-label' for='notify'>
+						<label className='form-check-label' htmlFor='notify'>
 							Notify users that that this content has changed
 						</label>
 					</div>

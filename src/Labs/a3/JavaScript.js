@@ -26,7 +26,6 @@ import FunctionDestructing from "./FunctionDestructing"
 import PathParameters from "./PathParameters"
 
 function JavaScript() {
-	console.log("Hello world")
 	return (
 		<div>
 			<h1>JavaScript</h1>
