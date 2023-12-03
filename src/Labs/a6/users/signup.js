@@ -14,7 +14,7 @@ function Signup() {
 		try {
 			const su = await client.signup(credentials)
 			console.log(su)
-			navigate("/Labs/a6/signin")
+			navigate("/Labs/a6/account")
 		} catch (err) {
 			setError(err.response.data.message)
 		}
